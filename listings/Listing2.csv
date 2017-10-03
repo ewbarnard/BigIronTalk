@@ -1,11 +1,11 @@
-Code generated,Location,Result,Operand,Comment
-020 100 001234,,A1,1234,$memory address
-121 100 000000,,S1,"0,A1",$sequence = $memory[0]
-121 200 000001,,S2,"1,A1",$start = $memory[1]
-121 300 000002,,S3,"2,A1",$length = $memory[2]
-42550,,S5,<30,Mask for $length
-54160,,S1,S1<60,$sequence << 48
-54230,,S2,S2<30,$start << 24
-51412,,S4,S1!S2,$result = $sequence | $start
-50435,,S4,S3!S4&S5,Merge $length into $result using mask in S5
-031 400 000003,,"3,A1",S4,$memory[3] = $result
+Line,Code generated,Location,Result,Operand,Comment
+1,020 100 001234,,A1,1234,$memory address
+2,121 100 000000,,S1,"0,A1",$sequence = $memory[0] (11 CP)
+3,121 200 000001,,S2,"1,A1",$start = $memory[1]
+4,121 300 000002,,S3,"2,A1",$length = $memory[2]
+5,042550,,S5,<30,Mask for $length
+6,054160,,S1,S1<60,$sequence << 48 (2 CP)
+7,054230,,S2,S2<30,$start << 24 (2 CP)
+8,051412,,S4,S1!S2,$result = $sequence | $start
+9,050435,,S4,S3!S4&S5,Merge $length into $result using mask in S5
+10,131 400 000003,,"3,A1",S4,$memory[3] = $result (11 CP)

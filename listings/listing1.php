@@ -1,6 +1,6 @@
 <?php
 /* "memory" contains transfer sequence; offset; limit; placeholder for below result */
-$memory = [1023, 1048576, 1024, 0];
+$memory = [511, 1048576, 1024, 0];
 
 /* Load local variables; on CRAY-1 these are transfers to CPU registers */
 $sequence = $memory[0];

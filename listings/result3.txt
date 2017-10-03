@@ -1,0 +1,2 @@
+php listing3.php
+start 0x100400, sequence 0x200, length 0x400, result 0x200100400000400
