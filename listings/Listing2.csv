@@ -9,14 +9,3 @@ Code generated,Location,Result,Operand,Comment
 51412,,S4,S1!S2,$result = $sequence | $start
 50435,,S4,S3!S4&S5,Merge $length into $result using mask in S5
 031 400 000003,,"3,A1",S4,$memory[3] = $result
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
