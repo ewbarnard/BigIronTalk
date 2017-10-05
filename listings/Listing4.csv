@@ -1,0 +1,28 @@
+Line,Code generated,Location,Result,Operand,Comment
+1,020 100 001234,,A1,1234,$memory address
+2,121 100 000003,,S1,"3,A1",$result = $memory[3] (11 CP)
+3,042 750,,S7,<30,Build masks during memory wait
+4,051 607,,S6,S7,Second mask
+5,054630,,S6,S6<30,Place second mask (2 CP)
+6,043 520,,S5,>20,Upper 16 bits
+7,044 215,,S2,S1&S5,$sequence
+8,055 260,,S2,S2>60,Shift into position (2 CP)
+9,044 316,,S3,S1&S6,$start
+10,055 330,,S3,S3>30,$start into position (2 CP)
+11,044 417,,S4,S1&S7,$length
+12,042 677,,S6,1,For incrementing $sequence
+13,060 226,,S2,S2+S6,++$sequence (3 CP)
+14,060 334,,S3,S3+S4,$start = $start + $length (3 CP)
+15,042 560,,S5,<20,16-bit mask
+16,044 225,,S2,S2&S5,$sequence masked
+17,044 337,,S3,S3&S7,$start masked
+18,051 502,,S5,S2,Unshifted $sequence
+19,051 603,,S6,S3,Unshifted $start
+20,054 260,,S2,S2<60,Shift $sequence (2 CP)
+21,054 330,,S3,S3<30,Shift $start (2 CP)
+22,051 142,,S1,S4!S2,$result = $length | $sequence
+23,051 113,,S1,S1!S3,Merge in $start
+24,131 500 000000,,"0,A1",S5,$memory[0] = $sequence (11 CP)
+25,131 600 000001,,"1,A1",S6,$memory[1] = $start (11 CP)
+26,131 400 000002,,"2,A1",S4,$memory[2] = $length (11 CP)
+27,131 100 000003,,"3,A1",S1,$memory[3] = $result (11 CP)
