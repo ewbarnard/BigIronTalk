@@ -1,2 +1,2 @@
 php listing1.php
-start 0x100000, sequence 0x1ff, length 0x400, result 0x1ff100000000400
+sequence 0777, start 04000000, length 02000, result 07770400000000002000

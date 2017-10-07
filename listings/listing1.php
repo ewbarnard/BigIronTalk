@@ -13,5 +13,5 @@ $result |= $start << 24;
 $result |= $length;
 $memory[3] = $result;
 
-printf('start 0x%x, sequence 0x%x, length 0x%x, result 0x%x' . PHP_EOL,
-	$start, $sequence, $length, $result);
+printf('sequence 0%o, start 0%o, length 0%o, result 0%o' . PHP_EOL,
+	$sequence, $start, $length, $result);
