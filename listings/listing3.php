@@ -1,6 +1,6 @@
 <?php
 /* "memory" contains result of listing1 processing */
-$memory = [511, 1048576, 1024, 0x1ff100000000400];
+$memory = [511, 1048576, 1024, 07770400000000002000];
 $mask16bits = 0xffff;
 $mask24bits = 0xffffff;
 
@@ -19,5 +19,5 @@ $memory[1] = $start;
 $memory[2] = $length;
 $memory[3] = $result;
 
-printf('start 0x%x, sequence 0x%x, length 0x%x, result 0x%x' . PHP_EOL,
-	$start, $sequence, $length, $result);
+printf('sequence 0%o, start 0%o, length 0%o, result 0%o' . PHP_EOL,
+	$sequence, $start, $length, $result);
