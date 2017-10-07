@@ -1,0 +1,14 @@
+Line,Expression,Decimal,Hex,Binary,Comment
+1,$b,5,0005,0000 0000 0000 0101,Upper hex digit
+2,($b - 10),-5,FFFB,1111 1111 1111 1011,Two’s Complement: Invert and add one
+3,($b - 10) >> 8,-1,FFFF,1111 1111 1111 1111,Right shift fills with sign bit
+4,38,38,0026,0000 0000 0010 0110,
+5,~38,-39,FFD9,1111 1111 1101 1001,
+6,(-1) & (-39),-39,FFD9,1111 1111 1101 1001,-1 & “anything” is “anything”
+7,87 + $b + -39,,,,See below
+8,87 + 5,92,005C,0000 0000 0101 1100,87 + 5 == 92
+9,92 + -39,53,0035,0000 0000 0011 0101,92 - 39 == 53
+10,chr(53) == ‘5’,,,,ASCII ‘5’ is 53
+11,$c,1,0001,0000 0000 0000 0001,Same calculation but 4 less
+12,chr(49) == ‘1’,49,0031,0000 0000 0011 0001,ASCII ‘1’ is 49
+13,"pack(‘CC’,53,49)",,,,$hex .= ’51’;
